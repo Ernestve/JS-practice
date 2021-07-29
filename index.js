@@ -269,9 +269,9 @@ console.log('Test 5:', deepEqual(john, { firstName: 'John' })) //false
 const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function chunk(array, size) {
-  let newChunk = []; // declara array vacio
-  for (let i = 0; i <= array.length; i+= size) // loop que recorre el array 
-    newChunk.push(array.slice(i, i + size)); // push al array el tramo desde el indice del loop hasta el valor size + el indicador 
+  let newChunk = []; 
+  for (let i = 0; i <= array.length; i = i+size) 
+    newChunk.push(array.slice(i, i + size));  
   return newChunk;
 }
 
@@ -280,4 +280,16 @@ console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
 console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
 
 //Reto 3
-
+function frequency(string) {
+  const abcObj = {}
+  for (const i in string) {
+    abcObj [string[i]] = (abcObj[string[i]] || 0 ) + 1; 
+  }
+  return abcObj
+};
+ console.log('Test 1:', frequency('cccbbbaaa'))
+ // {a: 3, b: 3, c: 3}
+ console.log('Test 2:', frequency('www.bedu.org'))
+ // {.: 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3}
+ console.log('Test 3:', frequency('john.doe@domain.com'))
+ // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
