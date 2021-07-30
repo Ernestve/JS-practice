@@ -193,7 +193,7 @@
 // });
 // console.log(`Resultado ${suma}`);
 
-//Potenciacion reto 1
+//Potenciacion reto 1 Sesion 4
 
 // let potencia = 1
 // function power(base, exponent) {
@@ -205,7 +205,7 @@
 // console.log(power(3,3));
 
 
-// //Numero Mayor Reto 2
+// //Numero Mayor Reto 2 Sesion 4
 
 // function getLargerInt(number1, number2) {
 //   if (number1>number2) {
@@ -217,7 +217,7 @@
 // console.log(getLargerInt(10,5));
 // console.log(getLargerInt(10,15));
 
-// // //Fibonacci Reto 3
+// // //Fibonacci Reto 3 Sesion 4
 // let n1 = 0
 // let n2 = 1
 // let resultado = n1 + n2
@@ -236,60 +236,63 @@
 
 //Postwork Sesion 4
 
-//Reto 1
+// //Reto 1
 
-let john = {
-  firstName: 'John',
-  lastName: 'Doe'
-}
+// let john = {
+//   firstName: 'John',
+//   lastName: 'Doe'
+// }
 
-function deepEqual(a, b) {
-  const obj1Keys = Object.keys(a);
-  const obj2Keys = Object.keys(b);
+// function deepEqual(a, b) {
+//   const obj1Keys = Object.keys(a);
+//   const obj2Keys = Object.keys(b);
   
-  if (obj1Keys.length !== obj2Keys.length) {
-    return false;
-  }
-  for (let objKey of obj1Keys) {
-    if (a[objKey] !== b[objKey]) {
-      return false;
-    }
-  }
-  return true;
-};
+//   if (obj1Keys.length !== obj2Keys.length) {
+//     return false;
+//   }
+//   for (let objKey of obj1Keys) {
+//     if (a[objKey] !== b[objKey]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-console.log('Test 1:', deepEqual(1, 1)) // true
-console.log('Test 2:', deepEqual(1, '1')) // false
-console.log('Test 3:', deepEqual(john, john)) // true
-console.log('Test 4:', deepEqual(john, { firstName: 'John', lastName: 'Doe' })) // true
-console.log('Test 5:', deepEqual(john, { firstName: 'John' })) //false
+// console.log('Test 1:', deepEqual(1, 1)) // true
+// console.log('Test 2:', deepEqual(1, '1')) // false
+// console.log('Test 3:', deepEqual(john, john)) // true
+// console.log('Test 4:', deepEqual(john, { firstName: 'John', lastName: 'Doe' })) // true
+// console.log('Test 5:', deepEqual(john, { firstName: 'John' })) //false
 
-//Reto 2
+// //Reto 2
 
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-function chunk(array, size) {
-  let newChunk = []; 
-  for (let i = 0; i <= array.length; i = i+size) 
-    newChunk.push(array.slice(i, i + size));  
-  return newChunk;
-}
+// function chunk(array, size) {
+//   let newChunk = []; 
+//   for (let i = 0; i <= array.length; i = i+size) 
+//     newChunk.push(array.slice(i, i + size));  
+//   return newChunk;
+// }
 
-console.log('Test 1:', chunk(data, 1)) // [[1], [2], [3], [4], [5], [6], [7], [8]]
-console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
-console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
+// console.log('Test 1:', chunk(data, 1)) // [[1], [2], [3], [4], [5], [6], [7], [8]]
+// console.log('Test 2:', chunk(data, 2)) // [[1, 2], [3, 4], [5, 6], [7, 8]]
+// console.log('Test 3:', chunk(data, 3)) // [[1, 2, 3], [4, 5, 6], [7, 8]]
 
-//Reto 3
-function frequency(string) {
-  const abcObj = {}
-  for (const i in string) {
-    abcObj [string[i]] = (abcObj[string[i]] || 0 ) + 1; 
-  }
-  return abcObj
-};
- console.log('Test 1:', frequency('cccbbbaaa'))
- // {a: 3, b: 3, c: 3}
- console.log('Test 2:', frequency('www.bedu.org'))
- // {.: 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3}
- console.log('Test 3:', frequency('john.doe@domain.com'))
- // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
+// //Reto 3
+
+// function frequency(string) {
+//   const abcObj = {}
+//   for (const i in string) {
+//     abcObj [string[i]] = (abcObj[string[i]] || 0 ) + 1; 
+//   }
+//   return abcObj
+// };
+//  console.log('Test 1:', frequency('cccbbbaaa'))
+//  // {a: 3, b: 3, c: 3}
+//  console.log('Test 2:', frequency('www.bedu.org'))
+//  // {.: 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3}
+//  console.log('Test 3:', frequency('john.doe@domain.com'))
+//  // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
+
+ //Reto 1 Sesion 5 
