@@ -270,7 +270,7 @@ const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function chunk(array, size) {
   let newChunk = []; 
-  for (let i = 0; i <= array.length; i = i+size) 
+  for (let i = 0; i < array.length; i = i+size) 
     newChunk.push(array.slice(i, i + size));  
   return newChunk;
 }
