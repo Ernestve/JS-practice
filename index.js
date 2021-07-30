@@ -296,3 +296,23 @@
 //  // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
 
  //Reto 1 Sesion 5 
+
+ var singers = [
+  { name: 'Steven Tyler', band: 'Aerosmith', born: 1948 },
+  { name: 'Karen Carpenter', band: 'The Carpenters', born: 1950 },
+  { name: 'Kurt Cobain', band: 'Nirvana', born: 1967 },
+  { name: 'Chris Cornell', band: 'Soundgarden', born: 1964 },
+];
+
+function pluck(list, propertyName) {
+  
+}
+
+console.log( pluck(singers, 'name') );
+// ["Steven Tyler", "Karen Carpenter", "Kurt Cobain", "Chris Cornell"]
+
+console.log( pluck(singers, 'band') );
+// ["Aerosmith", "The Carpenters", "Nirvana", "Soundgarden"]
+
+console.log( pluck(singers, 'born') );
+// [1948, 1950, 1967, 1964]
