@@ -295,24 +295,59 @@
 //  console.log('Test 3:', frequency('john.doe@domain.com'))
 //  // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
 
- //Reto 1 Sesion 5 
+//  //Reto 1 Sesion 5 
+// //Completar la función pluck que extrae una lista de propiedades de un arreglo de objetos.
 
- var singers = [
-  { name: 'Steven Tyler', band: 'Aerosmith', born: 1948 },
-  { name: 'Karen Carpenter', band: 'The Carpenters', born: 1950 },
-  { name: 'Kurt Cobain', band: 'Nirvana', born: 1967 },
-  { name: 'Chris Cornell', band: 'Soundgarden', born: 1964 },
-];
+//  var singers = [
+//   { name: 'Steven Tyler', band: 'Aerosmith', born: 1948 },
+//   { name: 'Karen Carpenter', band: 'The Carpenters', born: 1950 },
+//   { name: 'Kurt Cobain', band: 'Nirvana', born: 1967 },
+//   { name: 'Chris Cornell', band: 'Soundgarden', born: 1964 },
+// ];
 
-function pluck(list, propertyName) {
-  
+// function pluck(list, propertyName) {
+//   let newList = [];
+//   for (let i = 0; i < list.length; ++i) {
+//       newList.push(list[i][propertyName]);
+//   }
+//   return newList;
+// }
+
+// console.log( pluck(singers, 'name') );
+// // ["Steven Tyler", "Karen Carpenter", "Kurt Cobain", "Chris Cornell"]
+
+// console.log( pluck(singers, 'band') );
+// // ["Aerosmith", "The Carpenters", "Nirvana", "Soundgarden"]
+
+// console.log( pluck(singers, 'born') );
+// // [1948, 1950, 1967, 1964]
+
+// //Reto 2 Sesion 5
+// //Escribir una función que reciba un arreglo de 10 enteros entre 0 - 9, y retorne un string en forma de número telefónico.
+
+// function createPhoneNumber(numeros) {
+//   let telefono = '(nn)nn-nn-nn-nn'
+//   for (let numero of numeros) {
+//     telefono = telefono.replace('n', numero)
+//   }
+//   return telefono
+// }
+
+//  console.log("Formato"+" "+"telefonico", createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // "(123) 456-7890"
+
+//Reto 3 Sesion 6
+// Escribir una función que reciba un arreglo de n cantidad de enteros positivos que pueden no estar ordenados. 
+// La función debe retornar un nuevo arreglo con los elementos faltantes del primer arreglo.
+
+function findMissingNumbers(numbers) {
+  const sortedArray = numbers.sort((a, b) => a - b)
+  let missing = []
+  for (let i = numbers[0]; i < numbers[sortedArray.length - 1]; i++) {
+    if (sortedArray.indexOf(i) < 0) {
+      missing.push(i);
+    }
+  }
+  return missing
 }
 
-console.log( pluck(singers, 'name') );
-// ["Steven Tyler", "Karen Carpenter", "Kurt Cobain", "Chris Cornell"]
-
-console.log( pluck(singers, 'band') );
-// ["Aerosmith", "The Carpenters", "Nirvana", "Soundgarden"]
-
-console.log( pluck(singers, 'born') );
-// [1948, 1950, 1967, 1964]
+console.log(findMissingNumbers([2, 1, 9, 5, 7, 3, 10]));  // [4, 6, 8]
