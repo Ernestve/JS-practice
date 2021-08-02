@@ -335,19 +335,32 @@
 
 //  console.log("Formato"+" "+"telefonico", createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // "(123) 456-7890"
 
-//Reto 3 Sesion 6
+//Reto 3 Sesion 5
 // Escribir una función que reciba un arreglo de n cantidad de enteros positivos que pueden no estar ordenados. 
 // La función debe retornar un nuevo arreglo con los elementos faltantes del primer arreglo.
 
-function findMissingNumbers(numbers) {
-  const sortedArray = numbers.sort((a, b) => a - b)
-  let missing = []
-  for (let i = numbers[0]; i < numbers[sortedArray.length - 1]; i++) {
-    if (sortedArray.indexOf(i) < 0) {
-      missing.push(i);
-    }
-  }
-  return missing
-}
+// const numerosFaltantes = numeros => {
+//   let faltantes = []
+//   const numerosEnOrden = numeros.sort((a, b) => a - b)
+//   for (let i = numerosEnOrden[0]; i < numerosEnOrden[numerosEnOrden.length - 1]; i++) {
+//     if (numerosEnOrden.indexOf(i) < 0) {
+//       faltantes.push(i);
+//     }
+//   }
+//   return faltantes
+// }
 
-console.log(findMissingNumbers([2, 1, 9, 5, 7, 3, 10]));  // [4, 6, 8]
+// console.log(numerosFaltantes([20, 10, 90, 50, 70, 30, 100]));  // [4, 6, 8]
+
+/* //Reto 4 Sesion 5
+//Hacer que la función mutable, utilice un nuevo array y no modifique mi array principal llamado "array1"
+const array1 = ['Hello'];
+const mutable = array => {
+    let array2 = [...array]
+    array2.push('World');
+    return array2;
+}
+console.log(`Mi array1 al inicio: ${array1}`);
+console.log(`Mi array resultante: ${mutable(array1)}`);
+console.log(`Mi array1 después de la función: ${array1}`); */
+
