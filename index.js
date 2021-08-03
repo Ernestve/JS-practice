@@ -12,8 +12,6 @@
 // }
 // console.log(greeting)
 
-
-
 // const diametro = 1.4
 // const grosor = 0.4
 // let mensaje;
@@ -31,17 +29,13 @@
 // }
 // console.log(mensaje)
 
-
-
-// for (let i = 0; i<=100; i++) {  
+// for (let i = 0; i<=100; i++) {
 //     if (i % 2 === 0){
 //         console.log(`${i} Es par`);
 //     }else if (i%2 !== 0){
 //         console.log(`${i} Es impar`);
 //     }
 // }
-
-
 
 // console.log("2 es primo")
 // console.log("3 es primo")
@@ -56,18 +50,16 @@
 //     }
 // }
 
-
 //Doble de un array
 
 // const numbers = [5, 3, 4, 7, 2, 1, 9, 7, 7]
 // const doubled = []
 
 // for (let i = 0; i < numbers.length; i++) {
-//     doubled.push (numbers[i]*2); 
+//     doubled.push (numbers[i]*2);
 // }
 // console.log(numbers);
 // console.log(doubled);
-
 
 //Promedio de un array con ciclo for
 
@@ -83,7 +75,6 @@
 // let promedio = suma / numbers.length
 // console.log(promedio);
 
-
 //Promedio de un array con un ciclo for ...of
 
 // const numbers = [5, 3, 4, 7, 2, 1, 9, 7, 7]
@@ -96,7 +87,6 @@
 
 // let promedio = suma / numbers.length
 // console.log(promedio);
-
 
 //Promedio de un array con un ciclo for ...each
 
@@ -111,9 +101,7 @@
 // let promedio = suma / numbers.length
 // console.log(promedio);
 
-
 // Convertir un array en un objeto con for ...each
-
 
 // const car = [['brand', 'Nissan'], ['model', 'Versa'], ['year', 2020]]
 // const carInObj = {}
@@ -123,10 +111,7 @@
 // });
 // console.log(carInObj);
 
-
-
 //Extraer las URLs de facebook e instagram y renombrar las variables por fb e ig respectivamente.
-
 
 // const person = {
 //   firstName: 'John',
@@ -134,20 +119,20 @@
 //   links: {
 //     web: {
 //       blog: 'https://johndoe.com'
-//     }, 
+//     },
 //     social: {
 //       facebook: 'https://facebook.com/john.doe',
 //       instagram: 'https://instagram.com/john.doe'
-//     } 
+//     }
 //   }
 // }
 // Desestructuracion de objetos anidados
 // const {links:{social:{facebook:fb, instagram:ig}}} = person;
 
 // const {
-//   links:{ 
-//     social:{ 
-//       facebook:fb, instagram:ig 
+//   links:{
+//     social:{
+//       facebook:fb, instagram:ig
 //     }
 //   }
 // } = person;
@@ -155,9 +140,7 @@
 // console.log(fb);
 // console.log(ig);
 
-
-
-//Unir el array 1, 2 y 3, para después sumar todos los números que sean primos 
+//Unir el array 1, 2 y 3, para después sumar todos los números que sean primos
 
 // const array1 = [1, 2, 3, 4, 5];
 // const array2 = [6, 7, 8, 9, 10];
@@ -187,7 +170,6 @@
 
 // console.log(listaPrimos);
 
-
 // listaPrimos.forEach(listaPrimos => {
 //   suma = suma + listaPrimos
 // });
@@ -203,7 +185,6 @@
 //   console.log(potencia);
 // }
 // console.log(power(3,3));
-
 
 // //Numero Mayor Reto 2 Sesion 4
 
@@ -246,7 +227,7 @@
 // function deepEqual(a, b) {
 //   const obj1Keys = Object.keys(a);
 //   const obj2Keys = Object.keys(b);
-  
+
 //   if (obj1Keys.length !== obj2Keys.length) {
 //     return false;
 //   }
@@ -269,9 +250,9 @@
 // const data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // function chunk(array, size) {
-//   let newChunk = []; 
-//   for (let i = 0; i <= array.length; i = i+size) 
-//     newChunk.push(array.slice(i, i + size));  
+//   let newChunk = [];
+//   for (let i = 0; i <= array.length; i = i+size)
+//     newChunk.push(array.slice(i, i + size));
 //   return newChunk;
 // }
 
@@ -284,7 +265,7 @@
 // function frequency(string) {
 //   const abcObj = {}
 //   for (const i in string) {
-//     abcObj [string[i]] = (abcObj[string[i]] || 0 ) + 1; 
+//     abcObj [string[i]] = (abcObj[string[i]] || 0 ) + 1;
 //   }
 //   return abcObj
 // };
@@ -293,9 +274,9 @@
 //  console.log('Test 2:', frequency('www.bedu.org'))
 //  // {.: 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3}
 //  console.log('Test 3:', frequency('john.doe@domain.com'))
-//  // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4} 
+//  // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4}
 
-//  //Reto 1 Sesion 5 
+//  //Reto 1 Sesion 5
 // //Completar la función pluck que extrae una lista de propiedades de un arreglo de objetos.
 
 //  var singers = [
@@ -336,7 +317,7 @@
 //  console.log("Formato"+" "+"telefonico", createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // "(123) 456-7890"
 
 //Reto 3 Sesion 5
-// Escribir una función que reciba un arreglo de n cantidad de enteros positivos que pueden no estar ordenados. 
+// Escribir una función que reciba un arreglo de n cantidad de enteros positivos que pueden no estar ordenados.
 // La función debe retornar un nuevo arreglo con los elementos faltantes del primer arreglo.
 
 // const numerosFaltantes = numeros => {
@@ -364,3 +345,72 @@ console.log(`Mi array1 al inicio: ${array1}`);
 console.log(`Mi array resultante: ${mutable(array1)}`);
 console.log(`Mi array1 después de la función: ${array1}`); */
 
+// //Reto 1 S6
+// const Vec = function(x, y) {
+//     this.x = x
+//     this.y = y
+//   };
+//   Vec.prototype.plus = function(nuevoVec){
+//     return new Vec (this.x + nuevoVec.x, this.y + nuevoVec.y)
+//   };
+//   Vec.prototype.minus = function(nuevoVec){
+//     return new Vec (this.x - nuevoVec.x, this.y - nuevoVec.y)
+//   };
+//   Vec.prototype.length = function() {
+//     return Math.sqrt(this.x **2 + this.y **2)
+//   };
+//   const vec1 = new Vec(1, 2);
+//   const vec2 = new Vec(2, 3);
+
+//   console.log(vec1.plus(vec2)); // Vec { x: 3, y: 5 }
+//   console.log(vec1.minus(vec2)); // Vec { x: -1, y: -1 }
+//   console.log(vec1.length()); // 2.23606797749979
+
+//Reto 2 S6
+//Crear un function constructor Group el cual crea una lista (arreglo) vacía.
+// Agregar los siguientes métodos a Group:
+// add: Agrega un nuevo valor al grupo solo si no existe.
+// has: Retorna un booleano indicando si el valor es un miembro del grupo.
+// from: Método estático que recibe un arreglo y crea un grupo con todos los elementos de dicho arreglo.
+// const Group = function () {
+//   this.list = [];
+// };
+// Group.prototype.add = function (value) {
+//   if (!this.has(value)) {
+//     this.list.push(value);
+//   }
+// };
+// Group.prototype.has = function (value) {
+//   return this.list.includes(value);
+// };
+// Group.from = function (collection) {
+//   const group = new Group();
+//   collection.forEach((i) => {
+//     group.add(collection[i - 1]);
+//   });
+//   return group;
+// };
+
+// const group = Group.from([1, 2, 3, 4, 5]);
+// console.log(group); // Group { list: [ 1, 2, 3, 4, 5 ] }
+// console.log(group.has(5)); // true
+// console.log(group.has(10)); // false
+
+// group.add(10);
+// console.log(group.has(10)); // true
+
+//Reto 3 S6
+//Crear un function constructor Triangle con tres parámetros a, b y c. Cada uno representa un lado del triángulo.
+//Agregar el método getPerimeter al prototype de Triangle, el cual retorna el perímetro del triángulo.
+
+const Triangle = function (a, b, c) {
+  this.a = a;
+  this.b = b;
+  this.c = c;
+  this.getPerimeter = () => this.a + this.b + this.c
+};
+
+const triangle = new Triangle(1, 2, 3);
+
+console.log(triangle); // Triangle { a: 1, b: 2, c: 3 }
+console.log(triangle.getPerimeter()); // 6
