@@ -403,14 +403,90 @@ console.log(`Mi array1 después de la función: ${array1}`); */
 //Crear un function constructor Triangle con tres parámetros a, b y c. Cada uno representa un lado del triángulo.
 //Agregar el método getPerimeter al prototype de Triangle, el cual retorna el perímetro del triángulo.
 
-const Triangle = function (a, b, c) {
-  this.a = a;
-  this.b = b;
-  this.c = c;
-  this.getPerimeter = () => this.a + this.b + this.c
-};
+// const Triangle = function (a, b, c) {
+//   this.a = a;
+//   this.b = b;
+//   this.c = c;
+//   this.getPerimeter = () => this.a + this.b + this.c
+// };
 
-const triangle = new Triangle(1, 2, 3);
+// const triangle = new Triangle(1, 2, 3);
 
-console.log(triangle); // Triangle { a: 1, b: 2, c: 3 }
-console.log(triangle.getPerimeter()); // 6
+// console.log(triangle); // Triangle { a: 1, b: 2, c: 3 }
+// console.log(triangle.getPerimeter()); // 6
+
+//Reto 1 S7
+//Crear una función flatten que recibe un arreglo de arreglos y 
+//retorna un nuevo arreglo con todos los elementos del arreglo original.
+
+function flatten(arrays) {
+  return arrays.reduce(function(newArray, elements) {
+    return newArray.concat(elements); //.concat() - Se utiliza para unir 2 o mas arrays
+  }, []); //Valor inicial es un array vacio
+}
+
+const arrays = [[1, 2, 3], [4, 5], [6]];
+const array = flatten(arrays);
+console.log(array); // [1, 2, 3, 4, 5, 6]
+
+//Reto 2 S7
+//Crear una función compact que recibe un arreglo y 
+//retorna un nuevo arreglo sin incluir los valores que sean falsy.
+
+function compact(array) {
+  return array.filter(e => e) //El resultado de filter solo puede ser true o false, 
+                              //y solo agrega al array los que son true
+}
+const array = [0, 1, false, 2, '', 3];
+const compactedArray = compact(array);
+
+console.log(compactedArray); // [1, 2, 3]
+
+//Reto 3 S7
+//Crear una función de alto orden loop que será similar a un for.
+//Recibe tres argumentos: start, una función test, una función update y una función body.
+//El ciclo empieza en start y termina cuando test retorne false.
+//En cada iteración se ejecuta la función body dándole como argumento el valor actual de start actual.
+//Al final de cada ciclo se ejecuta la función update.
+
+function loop(start, test, update, body) {
+  for (let i = start; test(i); i = update(i)) {
+    body(i);
+  }
+}
+
+const test = function(n) {
+  return n > 0;
+}
+
+const update = function(n) {
+  return n - 1;
+}
+
+loop(3, test, update, console.log);
+// 3
+// 2
+// 1
+
+//Reto 4 S7 opcional
+
+const estudiantes = [
+      { nombre: 'Pedro', calif: 5, grupo: 'A' },
+      { nombre: 'Pablo', calif: 8, grupo: 'B' },
+      { nombre: 'Alexis', calif: 2, grupo: 'A' },
+      { nombre: 'Oscar', calif: 4, grupo: 'C' },
+      { nombre: 'Arturo', calif: 7, grupo: 'C' },
+      { nombre: 'Juan', calif: 5, grupo: 'A' },
+      { nombre: 'José', calif: 6, grupo: 'B' },
+      { nombre: 'Cesar', calif: 5, grupo: 'A' },
+      { nombre: 'Rodolfo', calif: 7, grupo: 'C' },
+      { nombre: 'Arturo', calif: 9, grupo: 'C' },
+      { nombre: 'Diego', calif: 8, grupo: 'A' },
+      { nombre: 'Esteban', calif: 6, grupo: 'B' },
+      { nombre: 'Julio', calif: 6, grupo: 'A' },
+      { nombre: 'Ciro', calif: 7, grupo: 'C' }
+  ];
+  
+  return grupoA; // Estudiantes grupo A aprobados [ { nombre: 'Diego', calif: 8, grupo: 'A' }, ..., {Promedio: ** } ]
+  return grupoB; // Estudiantes grupo B aprobados [ { nombre: 'Pablo', calif: 8, grupo: 'B' }, ..., {Promedio: ** } ]
+  return grupoC; // Estudiantes grupo C aprobados [ { nombre: 'Arturo', calif: 7, grupo: 'C' }, ..., {Promedio: ** } ]
